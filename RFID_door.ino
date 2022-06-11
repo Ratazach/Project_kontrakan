@@ -1,9 +1,11 @@
 
+/*
+coba-coba RFID doorlock system , no internet
+*/
 //RFID
 #include <SPI.h>
 #include <MFRC522.h>
 #include <Servo.h>
-// #define Relay 4
 #define SS_PIN 10
 #define RST_PIN 9
 #define  btnLamp 3
@@ -138,25 +140,6 @@ if (LampState != lastLampState) {
         myServo.write(0);
         delay(500);}
     }
-//     if (content.substring(1) == "A6 0A 60 83") //change here the UID of the card/cards that you want to give access
-//  {
-//    Serial.println("Authorized access");
-//   Serial.println();
-//    delay(100);
-//    data++;
-//    if (data > 1){data=data-2;}
-//    if(data==1){
-//      Serial.println (data); 
-//      delay(100);
-//      myServo.write(90);
-//      delay(500);}
-//   if(data == 0){
-//        Serial.println (data); 
-//        delay(100);
-//        myServo.write(0);
-//        delay(500);}
-//    }
-//    
  else   {
     Serial.println(" Access denied");
     delay(1000);
