@@ -1,16 +1,18 @@
+/*
+esp-01 test for Adafruit_MQTT
+*/
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
-//#include "Esp32MQTTClient.h"
-//#define Relay1            1
-#define WLAN_SSID       "moshiw"             // Your SSID
-#define WLAN_PASS       "konsbudjaya"        // Your password
+
+#define WLAN_SSID       "wi-fi"             
+#define WLAN_PASS       "pass"            
 
 #define AIO_SERVER      "io.adafruit.com" //Adafruit Server
 #define AIO_SERVERPORT  1883                   
-#define AIO_USERNAME    "AdeGfx"            // Username
-#define AIO_KEY         "5f67f5aa2ef44baebaad63d36e4b0910"   // Auth Key
-#define Relay 0
+#define AIO_USERNAME    "username" 
+#define AIO_KEY         "Auth"
+#define Relay 0         //esp-01 relay module pin
 //WIFI CLIENT
 WiFiClient client;
 
