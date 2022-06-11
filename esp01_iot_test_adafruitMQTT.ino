@@ -1,5 +1,5 @@
 /*
-esp-01 test for Adafruit_MQTT
+esp-01 test for Adafruit_MQTT for IoT
 */
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
