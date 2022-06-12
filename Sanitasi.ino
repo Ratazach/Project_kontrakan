@@ -1,45 +1,39 @@
- 
-#include <Servo.h>
+ #include <Servo.h>
+Servo servow;
+int data = 0;
+int nowState = 1;
+int lastState = 1;
+const int sensor = 5;
+int nilai = 0;
 
-const int trigPin = 7; // Trigger Pin of Ultrasonic Sensor
-const int echoPin = 6; // Echo Pin of Ultrasonic Sensor
-Servo Myservo; // Starting Serial Terminal
-
-Myservo.attach(5);  // Signal Pin of Servo      
-                                       
-pinMode(trigPin, OUTPUT);
-pinMode(echoPin, INPUT);
+void setup() {
+servow.attach(3);
+pinMode(sensor,INPUT);
+Serial.begin(9600);
+servow.write(70);
 }
 
-void loop()
-{
-  long duration, cm;
-  pinMode(trigPin, OUTPUT);
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-
-  pinMode(echoPin, INPUT);
-  duration = pulseIn(echoPin, HIGH);
-  cm = microsecondsToCentimeters(duration);
-  
-  Serial.print("Distance:");
-  Serial.print(cm);
-  Serial.print("cm");
-  delay(100);
-  
-    if(cm >= 5){
-Myservo.write(0);
-}
-else {
-Myservo.write(180);
-}
-  Serial.println();
-delay(100);
-}
-long microsecondsToCentimeters(long microseconds)
-{
-   return microseconds / 29 / 2;
+void loop() {  
+nowState = digitalRead(sensor);
+if(nowState != lastState){
+    if(nowState == LOW){  //sensor tertrigger
+      nilai++;
+      }else{              //sensor no trigger
+  lastState = nowState;
+        }
+  }
+  lastState = nowState;
+  if(nilai%2 == 0){
+    servow.write(60);  
+    }else{
+    servow.write(150);
+    delay(500);
+    servow.write(60);
+    delay(200);
+    servow.write(150);
+    delay(500);
+    servow.write(60);
+    nilai = 0;
+    delay(1000);
+    }
 }
