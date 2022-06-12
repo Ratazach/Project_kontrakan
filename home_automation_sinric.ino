@@ -1,3 +1,6 @@
+/*
+this code for esp8266 board using Sinric server, buka https://sinric.pro/ 
+*/
 // Uncomment the following line to enable serial debug output
 //#define ENABLE_DEBUG
 
@@ -14,15 +17,15 @@
 
 #include <map>
 
-#define WIFI_SSID         "moshiw"    
-#define WIFI_PASS         "konsbudjaya"
-#define APP_KEY           "60181d48-9926-4ed8-8876-5583f181fb71"      // Should look like "de0bxxxx-1x3x-4x3x-ax2x-5dabxxxxxxxx"
-#define APP_SECRET        "df09276e-7b84-4de2-82b8-9b4df1eec9c0-1c877614-4a0e-4d0a-9599-8c00e2b2d754"   // Should look like "5f36xxxx-x3x7-4x3x-xexe-e86724a9xxxx-4c4axxxx-3x3x-x5xe-x9x3-333d65xxxxxx"
+#define WIFI_SSID         "wifi"    
+#define WIFI_PASS         "pass"
+#define APP_KEY           "appkey"      // Should look like "de0bxxxx-1x3x-4x3x-ax2x-5dabxxxxxxxx"
+#define APP_SECRET        "appsecret"   // Should look like "5f36xxxx-x3x7-4x3x-xexe-e86724a9xxxx-4c4axxxx-3x3x-x5xe-x9x3-333d65xxxxxx"
 
 //Enter the device IDs here
-#define device_ID_1   "629f541fc67e23532c95134c" //fan
-#define device_ID_2   "629f5407c67e23532c95132f" //charger
-#define device_ID_3   "629f542ec67e23532c951372" //second charger
+#define device_ID_1   "id" //fan
+#define device_ID_2   "id" //charger
+#define device_ID_3   "id" //second charger
 
 // define the GPIO connected with Relays and switches
 #define RelayPin1 4  //D1
