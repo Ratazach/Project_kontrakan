@@ -14,14 +14,14 @@
 
 #include <map>
 
-#define WIFI_SSID         "moshiw"    
-#define WIFI_PASS         "konsbudjaya"
-#define APP_KEY           "95fb9687-25b7-48ad-ae97-0277bb6025c9"      // Should look like "de0bxxxx-1x3x-4x3x-ax2x-5dabxxxxxxxx"
-#define APP_SECRET        "48574c6f-057a-48cf-b106-8a34661f7ca2-6e653e9f-0b64-4d47-864b-29d7387c6905"   // Should look like "5f36xxxx-x3x7-4x3x-xexe-e86724a9xxxx-4c4axxxx-3x3x-x5xe-x9x3-333d65xxxxxx"
+#define WIFI_SSID         "wifi"    
+#define WIFI_PASS         "pass"
+#define APP_KEY           "app-key"      // Should look like "de0bxxxx-1x3x-4x3x-ax2x-5dabxxxxxxxx"
+#define APP_SECRET        "app-secret"   // Should look like "5f36xxxx-x3x7-4x3x-xexe-e86724a9xxxx-4c4axxxx-3x3x-x5xe-x9x3-333d65xxxxxx"
 
 //Enter the device IDs here
-#define device_ID_1   "613351629ff2c3320056421c" //humidifier
-//#define device_ID_1   "62a05ce1ff368211543a54ef" //TEST
+#define device_ID_1   "device id" //humidifier
+//#define device_ID_2   "test device id" //TEST
 
 // define the GPIO connected with Relays and switches
 #define RelayPin1 D3  //D1
